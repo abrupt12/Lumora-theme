@@ -1,0 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "announcement_bar_enabled": true,
+          "announcement_bar_text": "Less planning, more pool hangs. Shop the Memorial Day sale!",
+          "announcement_bar_link": "",
+          "announcement_bar_color": "#00f0e5",
+          "announcement_text_color": "#000000",
+          "logo_width": 100,
+          "menu": "main-menu",
+          "header_background": "#ffffff",
+          "header_text_color": "#000000",
+          "accent_color": "#00f0e5",
+          "show_search": true
+        }
+      },
+      "video-hero": {
+        "type": "video-hero",
+        "settings": {
+          "heading": "Don't let planning get in the way of",
+          "heading_highlight": "playtime",
+          "subtext": "<p>Hearth is a household organization tool that helps families prioritize what matters most.</p>",
+          "video_url": "",
+          "background_image": "shopify://shop_images/040e9ccd54d34c5287da2a0cfa0e5e8b.HD-1080p-2.5Mbps-465162791-vmake-ezgif.com-video-to-gif-converter.gif",
+          "button_text": "Shop Hearth",
+          "button_link": "",
+          "text_color": "#ffffff",
+          "overlay_color": "#000000",
+          "overlay_opacity": 0.4,
+          "highlight_color": "#00f0e5",
+          "button_background": "#00f0e5",
+          "button_text_color": "#000000"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "copyright_text": "All rights reserved.",
+          "show_payment_icons": true
+        }
+      }
+    },
+    "content_for_index": []
+  }
+}
