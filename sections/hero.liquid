@@ -1,4 +1,22 @@
-<div class="hero" style="background-image: url('{{ section.settings.image | img_url: 'master' }}')">
+{%- style -%}
+.hero-{{ section.id }} {
+  background-image: url('{{ section.settings.image | image_url: width: 375, height: 400, crop: "center" }}');
+}
+
+@media screen and (min-width: 750px) {
+  .hero-{{ section.id }} {
+    background-image: url('{{ section.settings.image | image_url: width: 1500, height: 800, crop: "center" }}');
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .hero-{{ section.id }} {
+    background-image: url('{{ section.settings.image | image_url: width: 2000, height: 1000, crop: "center" }}');
+  }
+}
+{%- endstyle -%}
+
+<div class="hero hero-{{ section.id }}">
   <div class="page-width">
     <div class="hero__inner">
       {% if section.settings.title != blank %}
@@ -67,6 +85,20 @@
 
 .hero__button:hover {
   background: var(--color-secondary);
+}
+
+@media screen and (max-width: 749px) {
+  .hero {
+    height: 400px;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__text {
+    font-size: 1rem;
+  }
 }
 </style>
 

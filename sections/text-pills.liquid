@@ -1,0 +1,302 @@
+{%- style -%}
+.text-pills-{{ section.id }} {
+  --pill-background: {{ section.settings.pill_background | default: '#ffffff' }};
+  --text-color: {{ section.settings.text_color | default: '#003B4D' }};
+}
+{%- endstyle -%}
+
+<div class="text-pills text-pills-{{ section.id }}">
+  <div class="page-width">
+    <div class="text-pills__container">
+      {%- if section.settings.text_line1 != blank -%}
+        <div class="text-pills__group">
+          <div class="text-pills__pill">{{ section.settings.text_line1 }}</div>
+          {%- if section.settings.icon1 != blank -%}
+            <div class="text-pills__icon">
+              <img src="{{ section.settings.icon1 | image_url }}" alt="" width="48" height="48">
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.text_line2 != blank -%}
+        <div class="text-pills__group">
+          <div class="text-pills__pill">{{ section.settings.text_line2 }}</div>
+          {%- if section.settings.icon2 != blank -%}
+            <div class="text-pills__icon">
+              <img src="{{ section.settings.icon2 | image_url }}" alt="" width="48" height="48">
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.text_line3 != blank -%}
+        <div class="text-pills__group">
+          <div class="text-pills__pill">{{ section.settings.text_line3 }}</div>
+          {%- if section.settings.icon3 != blank -%}
+            <div class="text-pills__icon">
+              <img src="{{ section.settings.icon3 | image_url }}" alt="" width="48" height="48">
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.text_line4 != blank -%}
+        <div class="text-pills__group">
+          <div class="text-pills__pill">{{ section.settings.text_line4 }}</div>
+          {%- if section.settings.icon4 != blank -%}
+            <div class="text-pills__icon">
+              <img src="{{ section.settings.icon4 | image_url }}" alt="" width="48" height="48">
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.text_line5 != blank -%}
+        <div class="text-pills__group">
+          <div class="text-pills__pill">{{ section.settings.text_line5 }}</div>
+          {%- if section.settings.icon5 != blank -%}
+            <div class="text-pills__icon">
+              <img src="{{ section.settings.icon5 | image_url }}" alt="" width="48" height="48">
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.description != blank -%}
+      <div class="text-pills__description">
+        {{ section.settings.description }}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.button_text != blank and section.settings.button_link != blank -%}
+      <div class="text-pills__button-wrapper">
+        <a href="{{ section.settings.button_link }}" class="button text-pills__button">
+          {{ section.settings.button_text }}
+          <span class="icon-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+<style>
+.text-pills {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.text-pills__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.text-pills__group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.text-pills__pill {
+  background: var(--pill-background);
+  color: var(--text-color);
+  padding: 0.75rem 2rem;
+  border-radius: 100px;
+  border: 2px solid var(--text-color);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.text-pills__icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.text-pills__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.text-pills__description {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.text-pills__button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.text-pills__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1em 2em;
+  background: {{ section.settings.button_background | default: '#003B4D' }};
+  color: {{ section.settings.button_text_color | default: '#ffffff' }};
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.text-pills__button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.icon-arrow {
+  transition: transform 0.2s ease;
+}
+
+.text-pills__button:hover .icon-arrow {
+  transform: translateX(4px);
+}
+
+@media screen and (max-width: 749px) {
+  .text-pills {
+    padding: 4rem 0;
+  }
+
+  .text-pills__container {
+    gap: 0.75rem;
+  }
+
+  .text-pills__pill {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .text-pills__icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-pills__button,
+  .icon-arrow {
+    transition: none;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Text Pills",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_line1",
+      "label": "Text Line 1",
+      "default": "Independence"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon1",
+      "label": "Icon 1"
+    },
+    {
+      "type": "text",
+      "id": "text_line2",
+      "label": "Text Line 2",
+      "default": "begins"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon2",
+      "label": "Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "text_line3",
+      "label": "Text Line 3",
+      "default": "with a"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon3",
+      "label": "Icon 3"
+    },
+    {
+      "type": "text",
+      "id": "text_line4",
+      "label": "Text Line 4",
+      "default": "single"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon4",
+      "label": "Icon 4"
+    },
+    {
+      "type": "text",
+      "id": "text_line5",
+      "label": "Text Line 5",
+      "default": "tap."
+    },
+    {
+      "type": "image_picker",
+      "id": "icon5",
+      "label": "Icon 5"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Hearth Display is a centralized hub that makes family lives easier for kids and parents at home. As a platform that grows with your child, Hearth gives your children a leg up by helping them develop foundational life skills through following routines, tracking responsibilities, and celebrating every milestone in between.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Discover Hearth Display"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#003B4D"
+    },
+    {
+      "type": "color",
+      "id": "pill_background",
+      "label": "Pill background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#003B4D"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Pills",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %} 
