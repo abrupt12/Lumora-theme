@@ -1,7 +1,0 @@
-store: mt130t-z0.myshopify.com
-theme:
-  directory: .
-  ignore:
-    - .git/
-    - .github/
-    - node_modules/ 
