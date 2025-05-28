@@ -1,0 +1,89 @@
+{%- comment -%} Homepage Lifestyle Timeline Section {%- endcomment -%}
+<section class="home-lifestyle">
+  <h2 class="home-lifestyle__title">Life inside a <span class="home-lifestyle__highlight">Hearth Home</span></h2>
+  <div class="home-lifestyle__timeline">
+    <div class="home-lifestyle__event">
+      <div class="home-lifestyle__time">6:00 AM</div>
+      <div class="home-lifestyle__desc">Get ahead of your day before getting out of bed. Track schedules, set up routines, and create checklists—all before breakfast.</div>
+    </div>
+    <div class="home-lifestyle__event">
+      <div class="home-lifestyle__time">8:00 AM</div>
+      <div class="home-lifestyle__desc">Tap away chaotic mornings. Set up to-dos and routines that keep the whole family accountable.</div>
+    </div>
+    <div class="home-lifestyle__event">
+      <div class="home-lifestyle__time">10:00 AM</div>
+      <div class="home-lifestyle__desc">Let nothing rain on your parade. Live weather updates help you and your little ones dress for the day.</div>
+    </div>
+    <div class="home-lifestyle__event">
+      <div class="home-lifestyle__time">2:00 PM</div>
+      <div class="home-lifestyle__desc">Manage the household on the fly. The companion app keeps your entire family on the same page remotely.</div>
+    </div>
+    <div class="home-lifestyle__event">
+      <div class="home-lifestyle__time">8:00 PM</div>
+      <div class="home-lifestyle__desc">High-fives around the house! Celebrate every day and feel proud of what you've accomplished together.</div>
+    </div>
+  </div>
+</section>
+
+<style>
+.home-lifestyle {
+  background: #fff;
+  padding: 4rem 0 3rem 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+.home-lifestyle__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #183642;
+  margin-bottom: 2.5rem;
+}
+.home-lifestyle__highlight {
+  color: #00c2b3;
+}
+.home-lifestyle__timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.home-lifestyle__event {
+  background: #faf7f2;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  padding: 2rem 1.5rem;
+  min-width: 220px;
+  max-width: 260px;
+  flex: 1 1 220px;
+  text-align: center;
+}
+.home-lifestyle__time {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00c2b3;
+  margin-bottom: 0.7rem;
+}
+.home-lifestyle__desc {
+  color: #183642;
+  font-size: 1rem;
+}
+@media (max-width: 900px) {
+  .home-lifestyle__timeline {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Home Lifestyle Timeline",
+  "settings": [],
+  "presets": [
+    { "name": "Home Lifestyle Timeline" }
+  ]
+}
+{% endschema %} 

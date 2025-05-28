@@ -1,0 +1,78 @@
+{%- comment -%} Homepage Newsletter Signup Section {%- endcomment -%}
+<section class="home-newsletter">
+  <div class="home-newsletter__container">
+    <h2 class="home-newsletter__title">Sign up for our newsletter</h2>
+    <form class="home-newsletter__form" method="post" action="/contact#newsletter">
+      <input type="email" name="contact[email]" class="home-newsletter__input" placeholder="Your email address" required>
+      <button type="submit" class="home-newsletter__button">Subscribe</button>
+    </form>
+    <div class="home-newsletter__note">No spam. Unsubscribe anytime.</div>
+  </div>
+</section>
+
+<style>
+.home-newsletter {
+  background: #fff;
+  padding: 3rem 0 2.5rem 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+.home-newsletter__container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.home-newsletter__title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #183642;
+  margin-bottom: 1.5rem;
+}
+.home-newsletter__form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.home-newsletter__input {
+  flex: 1 1 200px;
+  padding: 0.8rem 1rem;
+  border-radius: 32px;
+  border: 1px solid #00c2b3;
+  font-size: 1rem;
+  color: #183642;
+}
+.home-newsletter__button {
+  background: #00c2b3;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.home-newsletter__button:hover {
+  background: #183642;
+}
+.home-newsletter__note {
+  color: #666;
+  font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+  .home-newsletter__form {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Home Newsletter Signup",
+  "settings": [],
+  "presets": [
+    { "name": "Home Newsletter Signup" }
+  ]
+}
+{% endschema %} 

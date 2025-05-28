@@ -1,1 +1,229 @@
-{%- comment -%} Main product section for custom product page layout {%- endcomment -%} 
+{%- comment -%} Main product section for custom product page layout {%- endcomment -%}
+
+{%- style -%}
+  .product {
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .product__info-wrapper {
+    padding: 0 1rem;
+  }
+{%- endstyle -%}
+
+<div class="product">
+  <div class="page-width">
+    <div class="product__info-wrapper">
+      {% render 'product-info' %}
+    </div>
+  </div>
+
+  {% section 'product-includes' %}
+  {% section 'product-features' %}
+  {% section 'product-specs' %}
+  {% section 'product-membership' %}
+  {% section 'product-faq' %}
+</div>
+
+{% schema %}
+{
+  "name": "Product",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Product"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.main-product {
+  background: #faf7f2;
+  padding: 3rem 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+.main-product__container {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main-product__gallery {
+  flex: 1 1 45%;
+  display: flex;
+  gap: 2rem;
+}
+.main-product__thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main-product__thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #eee;
+  cursor: pointer;
+  background: #fff;
+}
+.main-product__main-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  padding: 2rem;
+}
+.main-product__main-image img {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 12px;
+}
+.main-product__info {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: flex-start;
+}
+.main-product__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #183642;
+}
+.main-product__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.1rem;
+  color: #183642;
+}
+.main-product__stars {
+  color: #ffc700;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+}
+.main-product__score {
+  color: #183642;
+  font-size: 1rem;
+}
+.main-product__desc {
+  color: #183642;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.main-product__price-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #183642;
+}
+.main-product__compare {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.main-product__badge {
+  background: #4ad9d9;
+  color: #183642;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 18px;
+  padding: 0.2em 1em;
+  margin-left: 0.5em;
+}
+.main-product__discount {
+  color: #183642;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.main-product__option-label {
+  font-size: 1.1rem;
+  color: #183642;
+  font-weight: 500;
+  margin-top: 1.2rem;
+}
+.main-product__option-value {
+  font-weight: 700;
+  margin-left: 0.3em;
+}
+.main-product__swatches {
+  display: flex;
+  gap: 1.2rem;
+  margin: 0.7rem 0 1.2rem 0;
+}
+.main-product__swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #b8b8b8;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.main-product__swatch--active {
+  border: 3px solid #183642;
+}
+.main-product__shipping-label {
+  font-size: 1.1rem;
+  color: #183642;
+  font-weight: 500;
+  margin-top: 1.2rem;
+}
+.main-product__shipping-info {
+  background: #f5ede3;
+  color: #183642;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.7em 1.2em;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+.main-product__membership-label {
+  font-size: 1.1rem;
+  color: #183642;
+  font-weight: 500;
+  margin-top: 1.2rem;
+}
+.main-product__membership-select {
+  font-size: 1.1rem;
+  padding: 0.7em 1.2em;
+  border-radius: 8px;
+  border: 1px solid #b8b8b8;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+@media (max-width: 900px) {
+  .main-product__container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .main-product__gallery {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .main-product {
+    padding: 1.5rem 0;
+  }
+  .main-product__container {
+    padding: 0 1rem;
+  }
+  .main-product__main-image img {
+    max-width: 100%;
+  }
+}
+</style> 

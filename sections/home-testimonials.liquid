@@ -1,0 +1,68 @@
+{%- comment -%} Homepage Testimonials Section {%- endcomment -%}
+<section class="home-testimonials">
+  <h2 class="home-testimonials__title">Hear from Hearth Homes</h2>
+  <div class="home-testimonials__grid">
+    <div class="home-testimonial">
+      <blockquote class="home-testimonial__quote">“Hearth Display has made our mornings so much smoother. My kids love checking off their routines!”</blockquote>
+      <div class="home-testimonial__author">— Sarah M.</div>
+    </div>
+    <div class="home-testimonial">
+      <blockquote class="home-testimonial__quote">“The companion app keeps our family in sync, even when I'm traveling for work.”</blockquote>
+      <div class="home-testimonial__author">— James L.</div>
+    </div>
+    <div class="home-testimonial">
+      <blockquote class="home-testimonial__quote">“We finally have one place for all our lists, calendars, and reminders. It's a game changer!”</blockquote>
+      <div class="home-testimonial__author">— Priya K.</div>
+    </div>
+  </div>
+</section>
+
+<style>
+.home-testimonials {
+  background: #faf7f2;
+  padding: 4rem 0 3rem 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+.home-testimonials__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #183642;
+  margin-bottom: 2.5rem;
+}
+.home-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.home-testimonial {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.home-testimonial__quote {
+  color: #183642;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  font-style: italic;
+}
+.home-testimonial__author {
+  color: #00c2b3;
+  font-size: 1rem;
+  font-weight: 600;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Home Testimonials",
+  "settings": [],
+  "presets": [
+    { "name": "Home Testimonials" }
+  ]
+}
+{% endschema %} 

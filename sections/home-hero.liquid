@@ -1,0 +1,70 @@
+{%- comment -%} Homepage Hero Banner Section {%- endcomment -%}
+<section class="home-hero">
+  <div class="home-hero__content">
+    <h1 class="home-hero__headline">Don't let planning get in the way of <span class="home-hero__highlight">playtime</span></h1>
+    <p class="home-hero__subheadline">Hearth is a household organization tool that helps families prioritize what matters most.</p>
+    <a href="/products/hearth-display" class="home-hero__cta">Shop Hearth</a>
+  </div>
+</section>
+
+<style>
+.home-hero {
+  background: #faf7f2;
+  padding: 5rem 0 4rem 0;
+  text-align: center;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+.home-hero__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.home-hero__headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #183642;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+.home-hero__highlight {
+  color: #00c2b3;
+}
+.home-hero__subheadline {
+  font-size: 1.25rem;
+  color: #183642;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+.home-hero__cta {
+  display: inline-block;
+  background: #00c2b3;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 32px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.home-hero__cta:hover {
+  background: #183642;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .home-hero__headline {
+    font-size: 2rem;
+  }
+  .home-hero__subheadline {
+    font-size: 1.05rem;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Home Hero",
+  "settings": [],
+  "presets": [
+    { "name": "Home Hero" }
+  ]
+}
+{% endschema %} 

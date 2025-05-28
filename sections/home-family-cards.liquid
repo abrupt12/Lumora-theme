@@ -1,0 +1,104 @@
+{%- comment -%} Homepage Family Member Cards Section {%- endcomment -%}
+<section class="home-family-cards">
+  <h2 class="home-family-cards__title">For every <span class="home-family-cards__highlight">family member</span></h2>
+  <div class="home-family-cards__grid">
+    <div class="home-family-card">
+      <h3 class="home-family-card__name">Baby</h3>
+      <ul class="home-family-card__list">
+        <li>Track feeding times</li>
+        <li>Daycare essentials</li>
+        <li>Doctor's appointments</li>
+      </ul>
+    </div>
+    <div class="home-family-card">
+      <h3 class="home-family-card__name">Toddler</h3>
+      <ul class="home-family-card__list">
+        <li>Build routines with visuals</li>
+        <li>Track milestones</li>
+        <li>Playdate reminders</li>
+      </ul>
+    </div>
+    <div class="home-family-card">
+      <h3 class="home-family-card__name">Big Kids</h3>
+      <ul class="home-family-card__list">
+        <li>School & extracurriculars</li>
+        <li>Chores with streaks</li>
+        <li>Homework reminders</li>
+      </ul>
+    </div>
+    <div class="home-family-card">
+      <h3 class="home-family-card__name">Adult</h3>
+      <ul class="home-family-card__list">
+        <li>Share work calendars</li>
+        <li>Track appointments</li>
+        <li>Daily reminders</li>
+      </ul>
+    </div>
+    <div class="home-family-card">
+      <h3 class="home-family-card__name">Families</h3>
+      <ul class="home-family-card__list">
+        <li>Shared family calendars</li>
+        <li>Grocery lists & meal plans</li>
+        <li>Manage every form of chaos</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+.home-family-cards {
+  background: #fff;
+  padding: 4rem 0 3rem 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+.home-family-cards__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #183642;
+  margin-bottom: 2.5rem;
+}
+.home-family-cards__highlight {
+  color: #00c2b3;
+}
+.home-family-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.home-family-card {
+  background: #faf7f2;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.home-family-card__name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #183642;
+  margin-bottom: 1rem;
+}
+.home-family-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #183642;
+  font-size: 1rem;
+}
+.home-family-card__list li {
+  margin-bottom: 0.5rem;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Home Family Cards",
+  "settings": [],
+  "presets": [
+    { "name": "Home Family Cards" }
+  ]
+}
+{% endschema %} 

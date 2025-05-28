@@ -1,0 +1,89 @@
+{%- comment -%} Homepage Features Section {%- endcomment -%}
+<section class="home-features">
+  <h2 class="home-features__title">Everything your family needs, all in <span class="home-features__highlight">one place</span>.</h2>
+  <div class="home-features__grid">
+    <div class="home-feature">
+      <img src="{{ 'feature-touchscreen.svg' | asset_url }}" alt="Touchscreen" class="home-feature__icon" width="56" height="56">
+      <h3 class="home-feature__name">Intuitive Touchscreen</h3>
+      <p class="home-feature__desc">A simple, beautiful interface for all ages to manage routines, calendars, and more.</p>
+    </div>
+    <div class="home-feature">
+      <img src="{{ 'feature-app.svg' | asset_url }}" alt="Companion App" class="home-feature__icon" width="56" height="56">
+      <h3 class="home-feature__name">Companion App</h3>
+      <p class="home-feature__desc">Stay organized on the go. Manage schedules, routines, and lists from anywhere.</p>
+    </div>
+    <div class="home-feature">
+      <img src="{{ 'feature-family.svg' | asset_url }}" alt="Grows with Family" class="home-feature__icon" width="56" height="56">
+      <h3 class="home-feature__name">Grows with Your Family</h3>
+      <p class="home-feature__desc">From toddlers to teens, Hearth adapts to your family's changing needs.</p>
+    </div>
+    <div class="home-feature">
+      <img src="{{ 'feature-os.svg' | asset_url }}" alt="All-in-One OS" class="home-feature__icon" width="56" height="56">
+      <h3 class="home-feature__name">All-in-One Command Center</h3>
+      <p class="home-feature__desc">Centralize calendars, lists, reminders, and more in one beautiful hub.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.home-features {
+  background: #fff;
+  padding: 4rem 0 3rem 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+.home-features__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #183642;
+  margin-bottom: 2.5rem;
+}
+.home-features__highlight {
+  color: #00c2b3;
+}
+.home-features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.home-feature {
+  background: #faf7f2;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.home-feature__icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1.2rem;
+}
+.home-feature__name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #183642;
+  margin-bottom: 0.5rem;
+}
+.home-feature__desc {
+  color: #183642;
+  font-size: 1rem;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .home-features__grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Home Features",
+  "settings": [],
+  "presets": [
+    { "name": "Home Features" }
+  ]
+}
+{% endschema %} 

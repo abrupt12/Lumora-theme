@@ -1,0 +1,28 @@
+{%- comment -%} Main Home Section for Custom Homepage Layout {%- endcomment -%}
+
+{%- style -%}
+  .main-home {
+    background: #faf7f2;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  }
+{%- endstyle -%}
+
+<div class="main-home">
+  {% section 'home-hero' %}
+  {% section 'home-features' %}
+  {% section 'home-lifestyle' %}
+  {% section 'home-family-cards' %}
+  {% section 'home-press' %}
+  {% section 'home-testimonials' %}
+  {% section 'home-newsletter' %}
+</div>
+
+{% schema %}
+{
+  "name": "Main Home",
+  "settings": [],
+  "presets": [
+    { "name": "Main Home" }
+  ]
+}
+{% endschema %} 

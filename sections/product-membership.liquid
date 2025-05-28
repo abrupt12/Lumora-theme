@@ -1,0 +1,119 @@
+{%- comment -%} Product Membership Section {%- endcomment -%}
+<div class="product-membership">
+  <h2 class="product-membership__title">Family Membership</h2>
+  <div class="product-membership__content">
+    <div class="product-membership__pricing">
+      <div class="product-membership__price">
+        <span class="price">$9</span>
+        <span class="period">/month</span>
+      </div>
+      <div class="product-membership__annual">
+        or $86.40/year (save 20%)
+      </div>
+    </div>
+    <div class="product-membership__features">
+      <div class="feature">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M9 11L12 14L22 4" stroke="#00c2b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="#00c2b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Unlimited profiles</span>
+      </div>
+      <div class="feature">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M9 11L12 14L22 4" stroke="#00c2b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="#00c2b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Unlimited lists & routines</span>
+      </div>
+      <div class="feature">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M9 11L12 14L22 4" stroke="#00c2b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="#00c2b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>AI-powered Hearth Helper</span>
+      </div>
+      <div class="feature">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M9 11L12 14L22 4" stroke="#00c2b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="#00c2b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Companion mobile app</span>
+      </div>
+    </div>
+    <div class="product-membership__note">
+      First month free, cancel anytime
+    </div>
+  </div>
+</div>
+
+<style>
+.product-membership {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-membership__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #183642;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.product-membership__content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.product-membership__pricing {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.product-membership__price {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #183642;
+}
+.product-membership__price .period {
+  font-size: 1.2rem;
+  color: #666;
+}
+.product-membership__annual {
+  color: #666;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.product-membership__features {
+  display: grid;
+  gap: 1rem;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #183642;
+  font-size: 1.1rem;
+}
+.product-membership__note {
+  text-align: center;
+  color: #666;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Product Membership",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Product Membership"
+    }
+  ]
+}
+{% endschema %} 
